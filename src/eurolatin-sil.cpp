@@ -19,6 +19,32 @@ std::optional<std::string> getCHARForSIL(std::string baseCharacter,
     if (silModifier == FcitxKey_O) return "Ø";
     if (silModifier == FcitxKey_s) return "ſ";
   }
+  if (baseCharacter == "equal") {
+    if (silModifier == FcitxKey_c) return "ɔ";
+    if (silModifier == FcitxKey_C) return "Ɔ";
+    if (silModifier == FcitxKey_e) return "ə";
+    if (silModifier == FcitxKey_E) return "Ə";
+    if (silModifier == FcitxKey_g) return "ɂ";
+    if (silModifier == FcitxKey_G) return "Ɂ";
+    if (silModifier == FcitxKey_i) return "ɲ";
+    if (silModifier == FcitxKey_I) return "Ɲ";
+    if (silModifier == FcitxKey_m) return "ŋ";
+    if (silModifier == FcitxKey_M) return "Ŋ";
+    if (silModifier == FcitxKey_o) return "ɵ";
+    if (silModifier == FcitxKey_O) return "Ɵ";
+    if (silModifier == FcitxKey_s) return "ß";
+    if (silModifier == FcitxKey_S) return "ẞ";
+    if (silModifier == FcitxKey_t) return "þ";
+    if (silModifier == FcitxKey_T) return "Þ";
+    if (silModifier == FcitxKey_x) return "ɣ";
+    if (silModifier == FcitxKey_X) return "Ɣ";
+    if (silModifier == FcitxKey_y) return "ȝ";
+    if (silModifier == FcitxKey_Y) return "Ȝ";
+    if (silModifier == FcitxKey_z) return "ʒ";
+    if (silModifier == FcitxKey_Z) return "Ʒ";
+    if (silModifier == FcitxKey_apostrophe) return "ꞌ";
+    if (silModifier == FcitxKey_quotedbl) return "Ꞌ";
+  }
 
   return {};
 }
@@ -56,7 +82,7 @@ bool isSILModifier(fcitx::KeySym key)
     key == FcitxKey_apostrophe;
 }
 
-/* probably the above logic can be simplified in some way, but I am dumb */
+/* probably the below logic can be simplified in some way, but I am dumb */
 
 void SILState::handleAlphaKey(fcitx::Key key)
 	{

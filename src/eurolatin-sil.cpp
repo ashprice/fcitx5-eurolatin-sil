@@ -78,6 +78,8 @@ std::optional<std::string> getCHARForSIL(std::string baseCharacter,
     if (silModifier == FcitxKey_U) return "Ų";
     if (silModifier == FcitxKey_z) return "ⱬ";
     if (silModifier == FcitxKey_Z) return "Ⱬ";
+    if (silModifier == FcitxKey_apostrophe) return "ḉ";
+    if (silModifier == FcitxKey_quotedbl) return "Ḉ";
   }
 
   return {};

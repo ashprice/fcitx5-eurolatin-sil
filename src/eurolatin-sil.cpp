@@ -45,6 +45,40 @@ std::optional<std::string> getCHARForSIL(std::string baseCharacter,
     if (silModifier == FcitxKey_apostrophe) return "ꞌ";
     if (silModifier == FcitxKey_quotedbl) return "Ꞌ";
   }
+  if (baseCharacter == "comma") {
+    if (silModifier == FcitxKey_a) return "ą";
+    if (silModifier == FcitxKey_A) return "Ą";
+    if (silModifier == FcitxKey_c) return "ç";
+    if (silModifier == FcitxKey_C) return "Ç";
+    if (silModifier == FcitxKey_d) return "ḑ";
+    if (silModifier == FcitxKey_D) return "Ḑ";
+    if (silModifier == FcitxKey_e) return "ę";
+    if (silModifier == FcitxKey_E) return "Ę";
+    if (silModifier == FcitxKey_g) return "ģ";
+    if (silModifier == FcitxKey_G) return "Ģ";
+    if (silModifier == FcitxKey_h) return "ḩ";
+    if (silModifier == FcitxKey_H) return "Ḩ";
+    if (silModifier == FcitxKey_i) return "į";
+    if (silModifier == FcitxKey_I) return "Į";
+    if (silModifier == FcitxKey_k) return "ķ";
+    if (silModifier == FcitxKey_K) return "Ķ";
+    if (silModifier == FcitxKey_l) return "ļ";
+    if (silModifier == FcitxKey_L) return "Ļ";
+    if (silModifier == FcitxKey_n) return "ņ";
+    if (silModifier == FcitxKey_N) return "Ņ";
+    if (silModifier == FcitxKey_o) return "ǫ";
+    if (silModifier == FcitxKey_O) return "Ǫ";
+    if (silModifier == FcitxKey_r) return "ŗ";
+    if (silModifier == FcitxKey_R) return "Ŗ";
+    if (silModifier == FcitxKey_s) return "ş";
+    if (silModifier == FcitxKey_S) return "Ş";
+    if (silModifier == FcitxKey_t) return "ţ";
+    if (silModifier == FcitxKey_T) return "Ţ";
+    if (silModifier == FcitxKey_u) return "ų";
+    if (silModifier == FcitxKey_U) return "Ų";
+    if (silModifier == FcitxKey_z) return "ⱬ";
+    if (silModifier == FcitxKey_Z) return "Ⱬ";
+  }
 
   return {};
 }

@@ -151,7 +151,12 @@ void SILState::handleAlphaKey(fcitx::Key key)
         m_ic->commitString(m_buffer.userInput());
         m_buffer.clear();
         updateUI();
-			}
+			} else {
+        m_buffer.type(key.sym());
+        m_ic->commitString(m_buffer.userInput());
+        m_buffer.clear();
+        updateUI();
+      }
       m_lastKey.reset();
 		}
 	}

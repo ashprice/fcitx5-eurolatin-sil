@@ -81,6 +81,46 @@ std::optional<std::string> getCHARForSIL(std::string baseCharacter,
     if (silModifier == FcitxKey_apostrophe) return "ḉ";
     if (silModifier == FcitxKey_quotedbl) return "Ḉ";
   }
+  if (baseCharacter == "bar") {
+    if (silModifier == FcitxKey_a) return "ạ";
+    if (silModifier == FcitxKey_A) return "Ạ";
+    if (silModifier == FcitxKey_b) return "ḅ";
+    if (silModifier == FcitxKey_B) return "Ḅ";
+    if (silModifier == FcitxKey_d) return "ḍ";
+    if (silModifier == FcitxKey_D) return "Ḍ";
+    if (silModifier == FcitxKey_e) return "ẹ";
+    if (silModifier == FcitxKey_E) return "Ẹ";
+    if (silModifier == FcitxKey_h) return "ḥ";
+    if (silModifier == FcitxKey_H) return "Ḥ";
+    if (silModifier == FcitxKey_i) return "ị";
+    if (silModifier == FcitxKey_I) return "Ị";
+    if (silModifier == FcitxKey_k) return "ḳ";
+    if (silModifier == FcitxKey_K) return "Ḳ";
+    if (silModifier == FcitxKey_l) return "ḷ";
+    if (silModifier == FcitxKey_L) return "Ḷ";
+    if (silModifier == FcitxKey_m) return "ṃ";
+    if (silModifier == FcitxKey_M) return "Ṃ";
+    if (silModifier == FcitxKey_n) return "ṇ";
+    if (silModifier == FcitxKey_N) return "Ṇ";
+    if (silModifier == FcitxKey_o) return "ọ";
+    if (silModifier == FcitxKey_O) return "Ọ";
+    if (silModifier == FcitxKey_r) return "ṛ";
+    if (silModifier == FcitxKey_R) return "Ṛ";
+    if (silModifier == FcitxKey_s) return "ṣ";
+    if (silModifier == FcitxKey_S) return "Ṣ";
+    if (silModifier == FcitxKey_t) return "ṭ";
+    if (silModifier == FcitxKey_T) return "Ṭ";
+    if (silModifier == FcitxKey_u) return "ụ";
+    if (silModifier == FcitxKey_U) return "Ụ";
+    if (silModifier == FcitxKey_v) return "ṿ";
+    if (silModifier == FcitxKey_V) return "Ṿ";
+    if (silModifier == FcitxKey_w) return "ẉ";
+    if (silModifier == FcitxKey_W) return "Ẉ";
+    if (silModifier == FcitxKey_y) return "ỵ";
+    if (silModifier == FcitxKey_Y) return "Ỵ";
+    if (silModifier == FcitxKey_z) return "ẓ";
+    if (silModifier == FcitxKey_Z) return "Ẓ";
+  }
 
   return {};
 }

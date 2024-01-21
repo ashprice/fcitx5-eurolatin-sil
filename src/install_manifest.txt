@@ -1,3 +1,0 @@
-/usr/lib/fcitx5/eurolatin-sil.so
-/usr/share/fcitx5/addon/eurolatin-sil.conf
-/usr/share/fcitx5/inputmethod/eurolatin-sil.conf

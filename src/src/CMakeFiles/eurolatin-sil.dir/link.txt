@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -Wall -Wextra  -Wl,--no-undefined -Wl,--as-needed  -shared -Wl,-soname,eurolatin-sil.so -o eurolatin-sil.so "CMakeFiles/eurolatin-sil.dir/eurolatin-sil.cpp.o"  /usr/lib/libFcitx5Core.so.5.1.7 /usr/lib/libFcitx5Config.so.5.1.7 /usr/lib/libFcitx5Utils.so.5.1.7 

@@ -129,10 +129,18 @@ void SILState::handleAlphaKey(fcitx::Key key)
 		}
 
     if (!isSILModifier(key.sym()) && m_lastKey.has_value()) {
-      m_lastKey.reset();
-      m_ic->commitString(m_buffer.userInput());
-      m_buffer.clear();
-      updateUI();
+      if (key.toString() == m_lastKey) {
+        m_lastKey.reset();
+        m_ic->commitString(m_buffer.userInput());
+        m_buffer.clear();
+        updateUI();
+      } else {
+        m_ic->commitString(m_buffer.userInput());
+        m_buffer.clear();
+        m_lastKey = key.toString();
+        m_buffer.type(key.sym());
+        return;
+      }
     }
 
     if (isSILModifier(key.sym()) && !m_lastKey.has_value()) {

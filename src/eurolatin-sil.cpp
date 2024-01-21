@@ -43,7 +43,7 @@ std::optional<std::string> getCHARForSIL(std::string baseCharacter,
     if (silModifier == FcitxKey_z) return "ʒ";
     if (silModifier == FcitxKey_Z) return "Ʒ";
     if (silModifier == FcitxKey_apostrophe) return "ꞌ";
-    if (silModifier == FcitxKey_quotedbl) return "Ꞌ"; /* this is broken and I'm not sure how to fix without writing more than I can be assed to rn */
+    if (silModifier == FcitxKey_quotedbl) return "Ꞌ";
   }
 
   return {};
@@ -79,7 +79,7 @@ bool isSILModifier(fcitx::KeySym key)
     key == FcitxKey_X || key == FcitxKey_x ||
     key == FcitxKey_Y || key == FcitxKey_y ||
     key == FcitxKey_Z || key == FcitxKey_z ||
-    key == FcitxKey_apostrophe;
+    key == FcitxKey_apostrophe || key == FcitxKey_quotedbl;
 }
 
 /* probably the below logic can be simplified in some way, but I am dumb */

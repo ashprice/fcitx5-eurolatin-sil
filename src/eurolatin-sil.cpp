@@ -43,7 +43,7 @@ std::optional<std::string> getCHARForSIL(std::string baseCharacter,
     if (silModifier == FcitxKey_z) return "ʒ";
     if (silModifier == FcitxKey_Z) return "Ʒ";
     if (silModifier == FcitxKey_apostrophe) return "ꞌ";
-    if (silModifier == FcitxKey_quotedbl) return "Ꞌ";
+    if (silModifier == FcitxKey_quotedbl) return "Ꞌ"; /* this is broken and I'm not sure how to fix without writing more than I can be assed to rn */
   }
 
   return {};

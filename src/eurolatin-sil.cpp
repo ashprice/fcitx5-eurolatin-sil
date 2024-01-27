@@ -178,7 +178,32 @@ std::optional<std::string> getCHARForSIL(std::string baseCharacter,
     if (silModifier == FcitxKey_w) return "ẘ";
     if (silModifier == FcitxKey_y) return "ẙ";
   }
-
+  if (baseCharacter == "colon") {
+    if (silModifier == FcitxKey_a) return "ä";
+    if (silModifier == FcitxKey_A) return "Ä";
+    if (silModifier == FcitxKey_e) return "ë";
+    if (silModifier == FcitxKey_E) return "Ë";
+    if (silModifier == FcitxKey_h) return "ḧ";
+    if (silModifier == FcitxKey_H) return "Ḧ";
+    if (silModifier == FcitxKey_i) return "ï";
+    if (silModifier == FcitxKey_I) return "Ï";
+    if (silModifier == FcitxKey_n) return "n̈";
+    if (silModifier == FcitxKey_N) return "N̈";
+    if (silModifier == FcitxKey_o) return "ö";
+    if (silModifier == FcitxKey_O) return "Ö";
+    if (silModifier == FcitxKey_p) return "p̈";
+    if (silModifier == FcitxKey_P) return "P̈";
+    if (silModifier == FcitxKey_t) return "ẗ";
+    if (silModifier == FcitxKey_T) return "T̈";
+    if (silModifier == FcitxKey_u) return "ü";
+    if (silModifier == FcitxKey_U) return "Ü";
+    if (silModifier == FcitxKey_w) return "ẅ";
+    if (silModifier == FcitxKey_W) return "Ẅ";
+    if (silModifier == FcitxKey_x) return "ẍ";
+    if (silModifier == FcitxKey_X) return "Ẍ";
+    if (silModifier == FcitxKey_y) return "ÿ";
+    if (silModifier == FcitxKey_Y) return "Ÿ";
+  }
 
   return {};
 }

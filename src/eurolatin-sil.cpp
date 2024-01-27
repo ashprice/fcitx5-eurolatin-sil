@@ -121,6 +121,51 @@ std::optional<std::string> getCHARForSIL(std::string baseCharacter,
     if (silModifier == FcitxKey_z) return "ẓ";
     if (silModifier == FcitxKey_Z) return "Ẓ";
   }
+  if (baseCharacter == "period") {
+    if (silModifier == FcitxKey_a) return "ȧ";
+    if (silModifier == FcitxKey_A) return "Ȧ";
+    if (silModifier == FcitxKey_b) return "ḃ";
+    if (silModifier == FcitxKey_B) return "Ḃ";
+    if (silModifier == FcitxKey_c) return "ċ";
+    if (silModifier == FcitxKey_C) return "Ċ";
+    if (silModifier == FcitxKey_d) return "ḋ";
+    if (silModifier == FcitxKey_D) return "Ḋ";
+    if (silModifier == FcitxKey_e) return "ė";
+    if (silModifier == FcitxKey_E) return "Ė";
+    if (silModifier == FcitxKey_f) return "ḟ";
+    if (silModifier == FcitxKey_F) return "Ḟ";
+    if (silModifier == FcitxKey_g) return "ġ";
+    if (silModifier == FcitxKey_G) return "Ġ";
+    if (silModifier == FcitxKey_h) return "ḣ";
+    if (silModifier == FcitxKey_H) return "Ḣ";
+    if (silModifier == FcitxKey_i) return "ı";
+    if (silModifier == FcitxKey_I) return "İ";
+    if (silModifier == FcitxKey_j) return "ȷ";
+    if (silModifier == FcitxKey_l) return "ŀ";
+    if (silModifier == FcitxKey_L) return "Ŀ";
+    if (silModifier == FcitxKey_m) return "ṁ";
+    if (silModifier == FcitxKey_M) return "Ṁ";
+    if (silModifier == FcitxKey_n) return "ṅ";
+    if (silModifier == FcitxKey_N) return "Ṅ";
+    if (silModifier == FcitxKey_o) return "ȯ";
+    if (silModifier == FcitxKey_O) return "Ȯ";
+    if (silModifier == FcitxKey_p) return "ṗ";
+    if (silModifier == FcitxKey_P) return "Ṗ";
+    if (silModifier == FcitxKey_r) return "ṙ";
+    if (silModifier == FcitxKey_R) return "Ṙ";
+    if (silModifier == FcitxKey_s) return "ṡ";
+    if (silModifier == FcitxKey_S) return "Ṡ";
+    if (silModifier == FcitxKey_t) return "ṫ";
+    if (silModifier == FcitxKey_T) return "Ṫ";
+    if (silModifier == FcitxKey_w) return "ẇ";
+    if (silModifier == FcitxKey_W) return "Ẇ";
+    if (silModifier == FcitxKey_x) return "ẋ";
+    if (silModifier == FcitxKey_X) return "Ẋ";
+    if (silModifier == FcitxKey_y) return "ẏ";
+    if (silModifier == FcitxKey_Y) return "Ẏ";
+    if (silModifier == FcitxKey_z) return "ż";
+    if (silModifier == FcitxKey_Z) return "Ż";
+  }
 
   return {};
 }

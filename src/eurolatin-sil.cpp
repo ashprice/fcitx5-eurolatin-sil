@@ -166,6 +166,19 @@ std::optional<std::string> getCHARForSIL(std::string baseCharacter,
     if (silModifier == FcitxKey_z) return "ż";
     if (silModifier == FcitxKey_Z) return "Ż";
   }
+  if (baseCharacter == "at") {
+    if (silModifier == FcitxKey_a) return "å";
+    if (silModifier == FcitxKey_A) return "Å";
+    if (silModifier == FcitxKey_u) return "ů";
+    if (silModifier == FcitxKey_U) return "Ů";
+    if (silModifier == FcitxKey_s) return "ș";
+    if (silModifier == FcitxKey_S) return "Ș";
+    if (silModifier == FcitxKey_t) return "ț";
+    if (silModifier == FcitxKey_T) return "Ț";
+    if (silModifier == FcitxKey_w) return "ẘ";
+    if (silModifier == FcitxKey_y) return "ẙ";
+  }
+
 
   return {};
 }

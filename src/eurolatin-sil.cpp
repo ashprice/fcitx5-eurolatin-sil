@@ -190,7 +190,6 @@ std::optional<std::string> getCHARForSIL(std::string baseCharacter,
     if (silModifier == FcitxKey_p) return "p̈";
     if (silModifier == FcitxKey_P) return "P̈";
     if (silModifier == FcitxKey_t) return "ẗ";
-    if (silModifier == FcitxKey_T) return "T̈";
     if (silModifier == FcitxKey_u) return "ü";
     if (silModifier == FcitxKey_U) return "Ü";
     if (silModifier == FcitxKey_w) return "ẅ";

@@ -200,6 +200,28 @@ std::optional<std::string> getCHARForSIL(std::string baseCharacter,
     if (silModifier == FcitxKey_Y) return "Ÿ";
   }
 
+  if (baseCharacter == "underscore") {
+    if (silModifier == FcitxKey_b) return "ḇ";
+    if (silModifier == FcitxKey_B) return "Ḇ";
+    if (silModifier == FcitxKey_d) return "ḏ";
+    if (silModifier == FcitxKey_D) return "Ḏ";
+    if (silModifier == FcitxKey_h) return "ẖ";
+    if (silModifier == FcitxKey_k) return "ḵ";
+    if (silModifier == FcitxKey_K) return "Ḵ";
+    if (silModifier == FcitxKey_l) return "ḻ";
+    if (silModifier == FcitxKey_L) return "Ḻ";
+    if (silModifier == FcitxKey_n) return "ṉ";
+    if (silModifier == FcitxKey_N) return "Ṉ";
+    if (silModifier == FcitxKey_r) return "ṟ";
+    if (silModifier == FcitxKey_R) return "Ṟ";
+    if (silModifier == FcitxKey_t) return "ṯ";
+    if (silModifier == FcitxKey_T) return "Ṯ";
+    if (silModifier == FcitxKey_x) return "x̱";
+    if (silModifier == FcitxKey_X) return "X̱";
+    if (silModifier == FcitxKey_z) return "ẕ";
+    if (silModifier == FcitxKey_Z) return "Ẕ";
+  }
+
   return {};
 }
 

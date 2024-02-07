@@ -221,6 +221,38 @@ std::optional<std::string> getCHARForSIL(std::string baseCharacter,
     if (silModifier == FcitxKey_z) return "ẕ";
     if (silModifier == FcitxKey_Z) return "Ẕ";
   }
+  if (baseCharacter == "minus") {
+    if (silModifier == FcitxKey_a) return "ā";
+    if (silModifier == FcitxKey_A) return "Ā";
+    if (silModifier == FcitxKey_b) return "ƀ";
+    if (silModifier == FcitxKey_B) return "Ƀ";
+    if (silModifier == FcitxKey_d) return "đ";
+    if (silModifier == FcitxKey_D) return "Đ";
+    if (silModifier == FcitxKey_e) return "ē";
+    if (silModifier == FcitxKey_E) return "Ē";
+    if (silModifier == FcitxKey_g) return "ḡ";
+    if (silModifier == FcitxKey_G) return "Ḡ";
+    if (silModifier == FcitxKey_h) return "ħ";
+    if (silModifier == FcitxKey_H) return "Ħ";
+    if (silModifier == FcitxKey_i) return "ī";
+    if (silModifier == FcitxKey_I) return "Ī";
+    if (silModifier == FcitxKey_j) return "ɉ";
+    if (silModifier == FcitxKey_J) return "Ɉ";
+    if (silModifier == FcitxKey_l) return "ł";
+    if (silModifier == FcitxKey_L) return "Ł";
+    if (silModifier == FcitxKey_o) return "ō";
+    if (silModifier == FcitxKey_O) return "Ō";
+    if (silModifier == FcitxKey_r) return "ɍ";
+    if (silModifier == FcitxKey_R) return "Ɍ";
+    if (silModifier == FcitxKey_t) return "ŧ";
+    if (silModifier == FcitxKey_T) return "Ŧ";
+    if (silModifier == FcitxKey_u) return "ū";
+    if (silModifier == FcitxKey_U) return "Ū";
+    if (silModifier == FcitxKey_y) return "ȳ";
+    if (silModifier == FcitxKey_Y) return "Ȳ";
+    if (silModifier == FcitxKey_z) return "ƶ";
+    if (silModifier == FcitxKey_Z) return "Ƶ";
+  }
 
   return {};
 }

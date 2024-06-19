@@ -199,7 +199,6 @@ std::optional<std::string> getCHARForSIL(std::string baseCharacter,
     if (silModifier == FcitxKey_y) return "ÿ";
     if (silModifier == FcitxKey_Y) return "Ÿ";
   }
-
   if (baseCharacter == "underscore") {
     if (silModifier == FcitxKey_b) return "ḇ";
     if (silModifier == FcitxKey_B) return "Ḇ";
@@ -253,11 +252,118 @@ std::optional<std::string> getCHARForSIL(std::string baseCharacter,
     if (silModifier == FcitxKey_z) return "ƶ";
     if (silModifier == FcitxKey_Z) return "Ƶ";
   }
+  if (baseCharacter == "grave") {
+    if (silModifier == FcitxKey_a) return "à";
+    if (silModifier == FcitxKey_A) return "À";
+    if (silModifier == FcitxKey_e) return "è";
+    if (silModifier == FcitxKey_E) return "È";
+    if (silModifier == FcitxKey_i) return "ì";
+    if (silModifier == FcitxKey_I) return "Ì";
+    if (silModifier == FcitxKey_n) return "ǹ";
+    if (silModifier == FcitxKey_N) return "Ǹ";
+    if (silModifier == FcitxKey_o) return "ò";
+    if (silModifier == FcitxKey_O) return "Ò";
+    if (silModifier == FcitxKey_u) return "ù";
+    if (silModifier == FcitxKey_U) return "Ù";
+    if (silModifier == FcitxKey_w) return "ẁ";
+    if (silModifier == FcitxKey_W) return "Ẁ";
+    if (silModifier == FcitxKey_y) return "ỳ";
+    if (silModifier == FcitxKey_Y) return "Ỳ";
+  }
+  if (baseCharacter == "numbersign") {
+    if (silModifier == FcitxKey_a) return "ȁ";
+    if (silModifier == FcitxKey_A) return "Ȁ";
+    if (silModifier == FcitxKey_e) return "ȅ";
+    if (silModifier == FcitxKey_E) return "Ȅ";
+    if (silModifier == FcitxKey_i) return "ȉ";
+    if (silModifier == FcitxKey_I) return "Ȉ";
+    if (silModifier == FcitxKey_o) return "ȍ";
+    if (silModifier == FcitxKey_O) return "Ȍ";
+    if (silModifier == FcitxKey_r) return "ȑ";
+    if (silModifier == FcitxKey_R) return "Ȑ";
+    if (silModifier == FcitxKey_u) return "ȕ";
+    if (silModifier == FcitxKey_U) return "Ȕ";
+  }
+  if (baseCharacter == "apostrophe") {
+    if (silModifier == FcitxKey_a) return "á";
+    if (silModifier == FcitxKey_A) return "Á";
+    if (silModifier == FcitxKey_c) return "ć";
+    if (silModifier == FcitxKey_C) return "Ć";
+    if (silModifier == FcitxKey_e) return "é";
+    if (silModifier == FcitxKey_E) return "É";
+    if (silModifier == FcitxKey_g) return "ǵ";
+    if (silModifier == FcitxKey_G) return "Ǵ";
+    if (silModifier == FcitxKey_i) return "í";
+    if (silModifier == FcitxKey_I) return "Í";
+    if (silModifier == FcitxKey_k) return "ḱ";
+    if (silModifier == FcitxKey_K) return "Ḱ";
+    if (silModifier == FcitxKey_l) return "ĺ";
+    if (silModifier == FcitxKey_L) return "Ĺ";
+    if (silModifier == FcitxKey_m) return "ḿ";
+    if (silModifier == FcitxKey_M) return "Ḿ";
+    if (silModifier == FcitxKey_n) return "ń";
+    if (silModifier == FcitxKey_N) return "Ń";
+    if (silModifier == FcitxKey_o) return "ó";
+    if (silModifier == FcitxKey_O) return "Ó";
+    if (silModifier == FcitxKey_p) return "ṕ";
+    if (silModifier == FcitxKey_P) return "Ṕ";
+    if (silModifier == FcitxKey_r) return "ŕ";
+    if (silModifier == FcitxKey_R) return "Ŕ";
+    if (silModifier == FcitxKey_s) return "ś";
+    if (silModifier == FcitxKey_S) return "Ś";
+    if (silModifier == FcitxKey_u) return "ú";
+    if (silModifier == FcitxKey_U) return "Ú";
+    if (silModifier == FcitxKey_w) return "ẃ";
+    if (silModifier == FcitxKey_W) return "Ẃ";
+    if (silModifier == FcitxKey_y) return "ý";
+    if (silModifier == FcitxKey_Y) return "Ý";
+    if (silModifier == FcitxKey_z) return "ź";
+    if (silModifier == FcitxKey_Z) return "Ź";
+  }
+  if (baseCharacter == "quotedbl") {
+    if (silModifier == FcitxKey_o) return "ő";
+    if (silModifier == FcitxKey_O) return "Ő";
+    if (silModifier == FcitxKey_u) return "ű";
+    if (silModifier == FcitxKey_U) return "Ű";
+  }
+  if (baseCharacter == "asciicircum") {
+    if (silModifier == FcitxKey_a) return "â";
+    if (silModifier == FcitxKey_A) return "Â";
+    if (silModifier == FcitxKey_c) return "ĉ";
+    if (silModifier == FcitxKey_C) return "Ĉ";
+    if (silModifier == FcitxKey_e) return "ê";
+    if (silModifier == FcitxKey_E) return "Ê";
+    if (silModifier == FcitxKey_g) return "ĝ";
+    if (silModifier == FcitxKey_G) return "Ĝ";
+    if (silModifier == FcitxKey_h) return "ĥ";
+    if (silModifier == FcitxKey_H) return "Ĥ";
+    if (silModifier == FcitxKey_i) return "î";
+    if (silModifier == FcitxKey_I) return "Î";
+    if (silModifier == FcitxKey_j) return "ĵ";
+    if (silModifier == FcitxKey_J) return "Ĵ";
+    if (silModifier == FcitxKey_o) return "ô";
+    if (silModifier == FcitxKey_O) return "Ô";
+    if (silModifier == FcitxKey_s) return "ŝ";
+    if (silModifier == FcitxKey_S) return "Ŝ";
+    if (silModifier == FcitxKey_u) return "û";
+    if (silModifier == FcitxKey_U) return "Û";
+    if (silModifier == FcitxKey_w) return "ŵ";
+    if (silModifier == FcitxKey_W) return "Ŵ";
+    if (silModifier == FcitxKey_y) return "ŷ";
+    if (silModifier == FcitxKey_Y) return "Ŷ";
+    if (silModifier == FcitxKey_z) return "ẑ";
+    if (silModifier == FcitxKey_Z) return "Ẑ";
+  }
 
   return {};
 }
 
-/* when the lazy way becomes the hard way */
+/* the lazy way became the hard way */
+
+bool isSpecialSILModifier(fcitx::KeySym key)
+{
+  return key == FcitxKey_apostrophe || key == FcitxKey_quotedbl;
+}
 
 bool isSILModifier(fcitx::KeySym key)
 {
@@ -315,11 +421,17 @@ void SILState::handleAlphaKey(fcitx::Key key)
       }
     }
 
-    if (isSILModifier(key.sym()) && !m_lastKey.has_value()) {
+    if (isSILModifier(key.sym()) && !isSpecialSILModifier(key.sym()) && !m_lastKey.has_value()) {
       m_buffer.type(key.sym());
       m_ic->commitString(m_buffer.userInput());
       m_buffer.clear();
       updateUI();
+      return;
+    }
+
+    if (isSILModifier(key.sym()) && isSpecialSILModifier(key.sym()) && !m_lastKey.has_value()) {
+      m_lastKey = key.toString();
+			m_buffer.type(key.sym());
       return;
     }
 
@@ -352,6 +464,7 @@ void SILState::keyEvent(fcitx::KeyEvent& keyEvent)
   } else if (keyEvent.key().check(FcitxKey_space)) {
     m_ic->commitString(m_buffer.userInput());
     m_ic->commitString(" ");
+    m_lastKey.reset();
     reset();
   } else if (keyEvent.key().check(FcitxKey_BackSpace)) {
     m_buffer.backspace();

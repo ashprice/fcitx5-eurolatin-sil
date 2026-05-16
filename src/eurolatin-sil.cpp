@@ -171,6 +171,10 @@ std::optional<std::string> getCHARForSIL(std::string baseCharacter,
     if (silModifier == FcitxKey_A) return "Å";
     if (silModifier == FcitxKey_u) return "ů";
     if (silModifier == FcitxKey_U) return "Ů";
+    if (silModifier == FcitxKey_s) return "ș";
+    if (silModifier == FcitxKey_S) return "Ș";
+    if (silModifier == FcitxKey_t) return "ț";
+    if (silModifier == FcitxKey_T) return "Ț";
     if (silModifier == FcitxKey_w) return "ẘ";
     if (silModifier == FcitxKey_y) return "ẙ";
   }
@@ -354,6 +358,96 @@ std::optional<std::string> getCHARForSIL(std::string baseCharacter,
     if (silModifier == FcitxKey_z) return "ẑ";
     if (silModifier == FcitxKey_Z) return "Ẑ";
   }
+  if (baseCharacter == "percent") {
+    if (silModifier == FcitxKey_a) return "ǎ";
+    if (silModifier == FcitxKey_A) return "Ǎ";
+    if (silModifier == FcitxKey_c) return "č";
+    if (silModifier == FcitxKey_C) return "Č";
+    if (silModifier == FcitxKey_d) return "ď";
+    if (silModifier == FcitxKey_D) return "Ď";
+    if (silModifier == FcitxKey_e) return "ě";
+    if (silModifier == FcitxKey_E) return "Ě";
+    if (silModifier == FcitxKey_g) return "ǧ";
+    if (silModifier == FcitxKey_G) return "Ǧ";
+    if (silModifier == FcitxKey_h) return "ȟ";
+    if (silModifier == FcitxKey_H) return "Ȟ";
+    if (silModifier == FcitxKey_i) return "ǐ";
+    if (silModifier == FcitxKey_I) return "Ǐ";
+    if (silModifier == FcitxKey_j) return "ǰ";
+    if (silModifier == FcitxKey_J) return "J̌";
+    if (silModifier == FcitxKey_k) return "ǩ";
+    if (silModifier == FcitxKey_K) return "Ǩ";
+    if (silModifier == FcitxKey_l) return "ľ";
+    if (silModifier == FcitxKey_L) return "Ľ";
+    if (silModifier == FcitxKey_n) return "ň";
+    if (silModifier == FcitxKey_N) return "Ň";
+    if (silModifier == FcitxKey_o) return "ǒ";
+    if (silModifier == FcitxKey_O) return "Ǒ";
+    if (silModifier == FcitxKey_r) return "ř";
+    if (silModifier == FcitxKey_R) return "Ř";
+    if (silModifier == FcitxKey_s) return "š";
+    if (silModifier == FcitxKey_S) return "Š";
+    if (silModifier == FcitxKey_t) return "ť";
+    if (silModifier == FcitxKey_T) return "Ť";
+    if (silModifier == FcitxKey_u) return "ǔ";
+    if (silModifier == FcitxKey_U) return "Ǔ";
+    if (silModifier == FcitxKey_x) return "ǯ";
+    if (silModifier == FcitxKey_X) return "Ǯ";
+    if (silModifier == FcitxKey_z) return "ž";
+    if (silModifier == FcitxKey_Z) return "Ž";
+  }
+  if (baseCharacter == "ampersand") {
+    if (silModifier == FcitxKey_a) return "ȃ";
+    if (silModifier == FcitxKey_A) return "Ȃ";
+    if (silModifier == FcitxKey_e) return "ȇ";
+    if (silModifier == FcitxKey_E) return "Ȇ";
+    if (silModifier == FcitxKey_i) return "ȋ";
+    if (silModifier == FcitxKey_I) return "Ȋ";
+    if (silModifier == FcitxKey_o) return "ȏ";
+    if (silModifier == FcitxKey_O) return "Ȏ";
+    if (silModifier == FcitxKey_r) return "ȓ";
+    if (silModifier == FcitxKey_R) return "Ȓ";
+    if (silModifier == FcitxKey_u) return "ȗ";
+    if (silModifier == FcitxKey_U) return "Ȗ";
+  }
+  if (baseCharacter == "asterisk") {
+    if (silModifier == FcitxKey_a) return "ă";
+    if (silModifier == FcitxKey_A) return "Ă";
+    if (silModifier == FcitxKey_e) return "ĕ";
+    if (silModifier == FcitxKey_E) return "Ĕ";
+    if (silModifier == FcitxKey_g) return "ğ";
+    if (silModifier == FcitxKey_G) return "Ğ";
+    if (silModifier == FcitxKey_h) return "ḫ";
+    if (silModifier == FcitxKey_H) return "Ḫ";
+    if (silModifier == FcitxKey_i) return "ĭ";
+    if (silModifier == FcitxKey_I) return "Ĭ";
+    if (silModifier == FcitxKey_o) return "ŏ";
+    if (silModifier == FcitxKey_O) return "Ŏ";
+    if (silModifier == FcitxKey_u) return "ŭ";
+    if (silModifier == FcitxKey_U) return "Ŭ";
+  }
+  if (baseCharacter == "asciitilde") {
+    if (silModifier == FcitxKey_a) return "ã";
+    if (silModifier == FcitxKey_A) return "Ã";
+    if (silModifier == FcitxKey_e) return "ẽ";
+    if (silModifier == FcitxKey_E) return "Ẽ";
+    if (silModifier == FcitxKey_g) return "g";
+    if (silModifier == FcitxKey_G) return "G";
+    if (silModifier == FcitxKey_i) return "ĩ";
+    if (silModifier == FcitxKey_I) return "Ĩ";
+    if (silModifier == FcitxKey_l) return "ɫ";
+    if (silModifier == FcitxKey_L) return "Ɫ";
+    if (silModifier == FcitxKey_n) return "ñ";
+    if (silModifier == FcitxKey_N) return "Ñ";
+    if (silModifier == FcitxKey_o) return "õ";
+    if (silModifier == FcitxKey_O) return "Õ";
+    if (silModifier == FcitxKey_u) return "ũ";
+    if (silModifier == FcitxKey_U) return "Ũ";
+    if (silModifier == FcitxKey_v) return "ṽ";
+    if (silModifier == FcitxKey_V) return "Ṽ";
+    if (silModifier == FcitxKey_y) return "ỹ";
+    if (silModifier == FcitxKey_Y) return "Ỹ";
+  }
 
   return {};
 }
@@ -362,7 +456,16 @@ std::optional<std::string> getCHARForSIL(std::string baseCharacter,
 
 bool isSpecialSILModifier(fcitx::KeySym key)
 {
-  return key == FcitxKey_apostrophe || key == FcitxKey_quotedbl;
+  return key == FcitxKey_apostrophe || key == FcitxKey_quotedbl ||
+  key == FcitxKey_grave || key == FcitxKey_numbersign ||
+  key == FcitxKey_asciicircum || key == FcitxKey_percent ||
+  key == FcitxKey_ampersand || key == FcitxKey_asterisk ||
+  key == FcitxKey_asciitilde || key == FcitxKey_minus ||
+  key == FcitxKey_underscore || key == FcitxKey_colon ||
+  key == FcitxKey_at || key == FcitxKey_period ||
+  key == FcitxKey_bar || key == FcitxKey_comma ||
+  key == FcitxKey_equal || key == FcitxKey_backslash ||
+  key == FcitxKey_dollar;
 }
 
 bool isSILModifier(fcitx::KeySym key)
@@ -396,10 +499,302 @@ bool isSILModifier(fcitx::KeySym key)
     key == FcitxKey_apostrophe || key == FcitxKey_quotedbl;
 }
 
+bool isTriPrefix(fcitx::KeySym key)
+{
+  return key == FcitxKey_a || key == FcitxKey_A ||
+  key == FcitxKey_c || key == FcitxKey_C ||
+  key == FcitxKey_d || key == FcitxKey_D ||
+  key == FcitxKey_f || key == FcitxKey_i ||
+  key == FcitxKey_l || key == FcitxKey_L ||
+  key == FcitxKey_n || key == FcitxKey_N;
+}
+
+bool isTriMid(fcitx::KeySym key)
+{
+  return key == FcitxKey_backslash;
+}
+
+bool isTriFinal(fcitx::KeySym key)
+{
+  return key == FcitxKey_e || key == FcitxKey_E ||
+  key == FcitxKey_h || key == FcitxKey_H ||
+  key == FcitxKey_z || key == FcitxKey_Z ||
+  key == FcitxKey_i || key == FcitxKey_l ||
+  key == FcitxKey_j || key == FcitxKey_J;
+}
+
 /* probably the below logic can be simplified in some way, but I am dumb */
 
 void SILState::handleAlphaKey(fcitx::Key key)
 	{
+
+    if (isTriPrefix(key.sym()) && !m_lastKey.has_value()) {
+      m_lastKey = key.toString();
+      m_buffer.type(key.sym());
+      return;
+    }
+
+    if (isTriPrefix(key.sym()) && m_lastKey.has_value()) {
+      if (m_lastKey == "a") {
+        m_buffer.type(key.sym());
+        m_lastKey = key.toString();
+        return;
+      } else if (m_lastKey == "A") {
+        m_buffer.type(key.sym());
+        m_lastKey = key.toString();
+        return;
+      } else if (m_lastKey == "c") {
+        m_buffer.type(key.sym());
+        m_lastKey = key.toString();
+        return;
+      } else if (m_lastKey == "C") {
+        m_buffer.type(key.sym());
+        m_lastKey = key.toString();
+        return;
+      } else if (m_lastKey == "d") {
+        m_buffer.type(key.sym());
+        m_lastKey = key.toString();
+        return;
+      } else if (m_lastKey == "D") {
+        m_buffer.type(key.sym());
+        m_lastKey = key.toString();
+        return;
+      } else if (m_lastKey == "f") {
+        m_buffer.type(key.sym());
+        m_lastKey = key.toString();
+        return;
+      } else if (m_lastKey == "i") {
+        m_buffer.type(key.sym());
+        m_lastKey = key.toString();
+        return;
+      } else if (m_lastKey == "l") {
+        m_buffer.type(key.sym());
+        m_lastKey = key.toString();
+        return;
+      } else if (m_lastKey == "L") {
+        m_buffer.type(key.sym());
+        m_lastKey = key.toString();
+        return;
+      } else if (m_lastKey == "n") {
+        m_buffer.type(key.sym());
+        m_lastKey = key.toString();
+        return;
+      } else if (m_lastKey == "N") {
+        m_buffer.type(key.sym());
+        m_lastKey = key.toString();
+        return;
+      }
+    }
+
+    if (isTriMid(key.sym()) && m_lastKey.has_value()) {
+      if (m_lastKey == "a") {
+        m_lastKey = "abackslash";
+        m_buffer.type(key.sym());
+        return;
+      } else if (m_lastKey == "A") {
+        m_lastKey = "Abackslash";
+        m_buffer.type(key.sym());
+        return;
+      } else if (m_lastKey == "c") {
+        m_lastKey = "cbackslash";
+        m_buffer.type(key.sym());
+        return;
+      } else if (m_lastKey == "C") {
+        m_lastKey = "Cbackslash";
+        m_buffer.type(key.sym());
+        return;
+      } else if (m_lastKey == "d") {
+        m_lastKey = "dbackslash";
+        m_buffer.type(key.sym());
+        return;
+      } else if (m_lastKey == "D") {
+        m_lastKey = "Dbackslash";
+        m_buffer.type(key.sym());
+        return;
+      } else if (m_lastKey == "f") {
+        m_lastKey = "fbackslash";
+        m_buffer.type(key.sym());
+        return;
+      } else if (m_lastKey == "i") {
+        m_lastKey = "ibackslash";
+        m_buffer.type(key.sym());
+        return;
+      } else if (m_lastKey == "l") {
+        m_lastKey = "lbackslash";
+        m_buffer.type(key.sym());
+        return;
+      } else if (m_lastKey == "L") {
+        m_lastKey = "Lbackslash";
+        m_buffer.type(key.sym());
+        return;
+      } else if (m_lastKey == "n") {
+        m_lastKey = "nbackslash";
+        m_buffer.type(key.sym());
+        return;
+      } else if (m_lastKey == "N") {
+        m_lastKey = "Nbackslash";
+        m_buffer.type(key.sym());
+        return;
+      }
+    }
+
+    if (isTriFinal(key.sym()) && m_lastKey.has_value()) {
+      if (m_lastKey == "abackslash" && key.sym() == FcitxKey_e) {
+        m_buffer.backspace();
+        m_buffer.backspace();
+				m_buffer.type("æ");
+        m_ic->commitString(m_buffer.userInput());
+        m_buffer.clear();
+        updateUI();
+        m_lastKey.reset();
+        return;
+      } else if (m_lastKey == "Abackslash" && key.sym() == FcitxKey_E) {
+        m_buffer.backspace();
+        m_buffer.backspace();
+        m_buffer.type("Æ");
+        m_ic->commitString(m_buffer.userInput());
+        m_buffer.clear();
+        updateUI();
+        m_lastKey.reset();
+        return;
+      } else if (m_lastKey == "cbackslash" && key.sym() == FcitxKey_h) {
+        m_buffer.backspace();
+        m_buffer.backspace();
+        m_buffer.type("c̲h̲");
+        m_ic->commitString(m_buffer.userInput());
+        m_buffer.clear();
+        updateUI();
+        m_lastKey.reset();
+        return;
+      } else if (m_lastKey == "Cbackslash" && key.sym() == FcitxKey_h) {
+        m_buffer.backspace();
+        m_buffer.backspace();
+        m_buffer.type("C̲h̲");
+        m_ic->commitString(m_buffer.userInput());
+        m_buffer.clear();
+        updateUI();
+        m_lastKey.reset();
+        return;
+      } else if (m_lastKey == "Cbackslash" && key.sym() == FcitxKey_H) {
+        m_buffer.backspace();
+        m_buffer.backspace();
+        m_buffer.type("C̲H̲");
+        m_ic->commitString(m_buffer.userInput());
+        m_buffer.clear();
+        updateUI();
+        m_lastKey.reset();
+        return;
+      } else if (m_lastKey == "dbackslash" && key.sym() == FcitxKey_z) {
+        m_buffer.backspace();
+        m_buffer.backspace();
+        m_buffer.type("ǆ");
+        m_ic->commitString(m_buffer.userInput());
+        m_buffer.clear();
+        updateUI();
+        m_lastKey.reset();
+        return;
+      } else if (m_lastKey == "Dbackslash" && key.sym() == FcitxKey_z) {
+        m_buffer.backspace();
+        m_buffer.backspace();
+        m_buffer.type("ǅ");
+        m_ic->commitString(m_buffer.userInput());
+        m_buffer.clear();
+        updateUI();
+        m_lastKey.reset();
+        return;
+      } else if (m_lastKey == "Dbackslash" && key.sym() == FcitxKey_Z) {
+        m_buffer.backspace();
+        m_buffer.backspace();
+        m_buffer.type("Ǆ");
+        m_ic->commitString(m_buffer.userInput());
+        m_buffer.clear();
+        updateUI();
+        m_lastKey.reset();
+        return;
+      } else if (m_lastKey == "fbackslash" && key.sym() == FcitxKey_i) {
+        m_buffer.backspace();
+        m_buffer.backspace();
+        m_buffer.type("ﬁ");
+        m_ic->commitString(m_buffer.userInput());
+        m_buffer.clear();
+        updateUI();
+        m_lastKey.reset();
+        return;
+      } else if (m_lastKey == "fbackslash" && key.sym() == FcitxKey_l) {
+        m_buffer.backspace();
+        m_buffer.backspace();
+        m_buffer.type("ﬂ");
+        m_ic->commitString(m_buffer.userInput());
+        m_buffer.clear();
+        updateUI();
+        m_lastKey.reset();
+        return;
+      } else if (m_lastKey == "ibackslash" && key.sym() == FcitxKey_j) {
+        m_buffer.backspace();
+        m_buffer.backspace();
+        m_buffer.type("ĳ");
+        m_ic->commitString(m_buffer.userInput());
+        m_buffer.clear();
+        updateUI();
+        m_lastKey.reset();
+        return;
+      } else if (m_lastKey == "lbackslash" && key.sym() == FcitxKey_j) {
+        m_buffer.backspace();
+        m_buffer.backspace();
+        m_buffer.type("ǉ");
+        m_ic->commitString(m_buffer.userInput());
+        m_buffer.clear();
+        updateUI();
+        m_lastKey.reset();
+        return;
+      } else if (m_lastKey == "Lbackslash" && key.sym() == FcitxKey_j) {
+        m_buffer.backspace();
+        m_buffer.backspace();
+        m_buffer.type("ǈ");
+        m_ic->commitString(m_buffer.userInput());
+        m_buffer.clear();
+        updateUI();
+        m_lastKey.reset();
+        return;
+      } else if (m_lastKey == "Lbackslash" && key.sym() == FcitxKey_J) {
+        m_buffer.backspace();
+        m_buffer.backspace();
+        m_buffer.type("Ǉ");
+        m_ic->commitString(m_buffer.userInput());
+        m_buffer.clear();
+        updateUI();
+        m_lastKey.reset();
+        return;
+      } else if (m_lastKey == "nbackslash" && key.sym() == FcitxKey_j) {
+        m_buffer.backspace();
+        m_buffer.backspace();
+        m_buffer.type("ǌ");
+        m_ic->commitString(m_buffer.userInput());
+        m_buffer.clear();
+        updateUI();
+        m_lastKey.reset();
+        return;
+      } else if (m_lastKey == "Nbackslash" && key.sym() == FcitxKey_j) {
+        m_buffer.backspace();
+        m_buffer.backspace();
+        m_buffer.type("ǋ");
+        m_ic->commitString(m_buffer.userInput());
+        m_buffer.clear();
+        updateUI();
+        m_lastKey.reset();
+        return;
+      } else if (m_lastKey == "Nbackslash" && key.sym() == FcitxKey_J) {
+        m_buffer.backspace();
+        m_buffer.backspace();
+        m_buffer.type("Ǌ");
+        m_ic->commitString(m_buffer.userInput());
+        m_buffer.clear();
+        updateUI();
+        m_lastKey.reset();
+        return;
+      }
+    }
+
 		if (!isSILModifier(key.sym()) && !m_lastKey.has_value()) {
       m_lastKey = key.toString();
 			m_buffer.type(key.sym());

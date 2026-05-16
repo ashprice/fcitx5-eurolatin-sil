@@ -18,6 +18,29 @@ std::optional<std::string> getCHARForSIL(std::string baseCharacter,
     if (silModifier == FcitxKey_o) return "ø";
     if (silModifier == FcitxKey_O) return "Ø";
     if (silModifier == FcitxKey_s) return "ſ";
+
+    if (silModifier == FcitxKey_question) return "¿";
+    if (silModifier == FcitxKey_exclam) return "¡";
+    if (silModifier == FcitxKey_f) return "ª";
+    if (silModifier == FcitxKey_m) return "º";
+    if (silModifier == FcitxKey_P) return "¶";
+    if (silModifier == FcitxKey_S) return "§";
+    if (silModifier == FcitxKey_T) return "‡";
+    if (silModifier == FcitxKey_t) return "†";
+    if (silModifier == FcitxKey_bar) return "¦";
+    if (silModifier == FcitxKey_c) return "©";
+    if (silModifier == FcitxKey_p) return "℗";
+    if (silModifier == FcitxKey_r) return "®";
+    if (silModifier == FcitxKey_colon) return "¨";
+    if (silModifier == FcitxKey_apostrophe) return "´";
+    if (silModifier == FcitxKey_comma) return "¸";
+    if (silModifier == FcitxKey_underscore) return "¯";
+    if (silModifier == FcitxKey_M) return "—";
+    if (silModifier == FcitxKey_N) return "–";
+    if (silModifier == FcitxKey_minus) return "–";
+    if (silModifier == FcitxKey_asciitilde) return "¬";
+    if (silModifier == FcitxKey_period) return "·";
+    if (silModifier == FcitxKey_greater) return "•";
   }
   if (baseCharacter == "equal") {
     if (silModifier == FcitxKey_c) return "ɔ";
@@ -448,6 +471,12 @@ std::optional<std::string> getCHARForSIL(std::string baseCharacter,
     if (silModifier == FcitxKey_y) return "ỹ";
     if (silModifier == FcitxKey_Y) return "Ỹ";
   }
+  if (baseCharacter == "less") {
+    if (silModifier == FcitxKey_less) return "«";
+  }
+  if (baseCharacter == "greater") {
+    if (silModifier == FcitxKey_greater) return "»";
+  }
 
   return {};
 }
@@ -465,7 +494,8 @@ bool isSpecialSILModifier(fcitx::KeySym key)
   key == FcitxKey_at || key == FcitxKey_period ||
   key == FcitxKey_bar || key == FcitxKey_comma ||
   key == FcitxKey_equal || key == FcitxKey_backslash ||
-  key == FcitxKey_dollar;
+  key == FcitxKey_dollar || key == FcitxKey_less ||
+  key == FcitxKey_greater;
 }
 
 bool isSILModifier(fcitx::KeySym key)
@@ -496,7 +526,13 @@ bool isSILModifier(fcitx::KeySym key)
     key == FcitxKey_X || key == FcitxKey_x ||
     key == FcitxKey_Y || key == FcitxKey_y ||
     key == FcitxKey_Z || key == FcitxKey_z ||
-    key == FcitxKey_apostrophe || key == FcitxKey_quotedbl;
+    key == FcitxKey_apostrophe || key == FcitxKey_quotedbl ||
+    key == FcitxKey_question || key == FcitxKey_exclam ||
+    key == FcitxKey_less || key == FcitxKey_greater ||
+    key == FcitxKey_bar || key == FcitxKey_colon ||
+    key == FcitxKey_comma || key == FcitxKey_underscore ||
+    key == FcitxKey_minus || key == FcitxKey_asciitilde ||
+    key == FcitxKey_period;
 }
 
 bool isTriPrefix(fcitx::KeySym key)
@@ -506,7 +542,8 @@ bool isTriPrefix(fcitx::KeySym key)
   key == FcitxKey_d || key == FcitxKey_D ||
   key == FcitxKey_f || key == FcitxKey_i ||
   key == FcitxKey_l || key == FcitxKey_L ||
-  key == FcitxKey_n || key == FcitxKey_N;
+  key == FcitxKey_n || key == FcitxKey_N ||
+  key == FcitxKey_t;
 }
 
 bool isTriMid(fcitx::KeySym key)
@@ -520,7 +557,8 @@ bool isTriFinal(fcitx::KeySym key)
   key == FcitxKey_h || key == FcitxKey_H ||
   key == FcitxKey_z || key == FcitxKey_Z ||
   key == FcitxKey_i || key == FcitxKey_l ||
-  key == FcitxKey_j || key == FcitxKey_J;
+  key == FcitxKey_j || key == FcitxKey_J ||
+  key == FcitxKey_m;
 }
 
 /* probably the below logic can be simplified in some way, but I am dumb */
@@ -583,6 +621,10 @@ void SILState::handleAlphaKey(fcitx::Key key)
         m_buffer.type(key.sym());
         m_lastKey = key.toString();
         return;
+      } else if (m_lastKey == "t") {
+        m_buffer.type(key.sym());
+        m_lastKey = key.toString();
+        return;
       }
     }
 
@@ -633,6 +675,10 @@ void SILState::handleAlphaKey(fcitx::Key key)
         return;
       } else if (m_lastKey == "N") {
         m_lastKey = "Nbackslash";
+        m_buffer.type(key.sym());
+        return;
+      } else if (m_lastKey == "t") {
+        m_lastKey = "tbackslash";
         m_buffer.type(key.sym());
         return;
       }
@@ -792,6 +838,15 @@ void SILState::handleAlphaKey(fcitx::Key key)
         updateUI();
         m_lastKey.reset();
         return;
+      } else if (m_lastKey == "tbackslash" && key.sym() == FcitxKey_m) {
+        m_buffer.backspace();
+        m_buffer.backspace();
+        m_buffer.type("™");
+        m_ic->commitString(m_buffer.userInput());
+        m_buffer.clear();
+        updateUI();
+        m_lastKey.reset();
+        return;
       }
     }
 
@@ -817,7 +872,7 @@ void SILState::handleAlphaKey(fcitx::Key key)
       }
     }
 
-    if (isSpecialSILModifier(key.sym()) && m_lastKey.has_value()) {
+    if (isSpecialSILModifier(key.sym()) && m_lastKey.has_value() && (m_lastKey != "greater" && m_lastKey != "less")) {
       if (key.toString() == m_lastKey) {
         m_ic->commitString(m_buffer.userInput());
         m_buffer.clear();
